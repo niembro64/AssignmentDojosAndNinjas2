@@ -1,24 +1,3 @@
-INSERT INTO dojos (name, created_at, updated_at)
-VALUES 
-('Samurai', NOW(), NOW()),
-('Taekwando', NOW(), NOW()),
-('Ninja', NOW(), NOW())
-;
-
-DELETE FROM dojos
-WHERE id <> 0;
-
-SELECT * FROM dojos;
-
-INSERT INTO ninjas (name, created_at, updated_at)
-VALUES 
-('Samurai', NOW(), NOW()),
-('Taekwando', NOW(), NOW()),
-('Ninja', NOW(), NOW())
-;
-
-------------------------
-
 SELECT * FROM d_and_n.ninjas;
 
 INSERT INTO ninjas
@@ -28,7 +7,6 @@ VALUES
 ("Roby", "Daniele", 30, NOW(), NOW(), 12),
 ("Cole", "Garrison", 34, NOW(), NOW(), 12);
 
-
 INSERT INTO ninjas
 (first_name, last_name, age, created_at, updated_at, dojo_id)
 VALUES
@@ -36,17 +14,9 @@ VALUES
 ("Helper", "Daniele", 30, NOW(), NOW(), 13),
 ("Nothing", "Garrison", 34, NOW(), NOW(), 13);
 
-
-
-SELECT * FROM ninjas
-WHERE dojo_id = 11;
-
-SELECT * FROM ninjas
-WHERE dojo_id = 12;
-
 SELECT * FROM ninjas
 WHERE dojo_id = 13;
 
-
 select dojo_id FROM ninjas
 WHERE id = (SELECT MAX(id) FROM ninjas);
+
